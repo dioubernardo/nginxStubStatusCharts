@@ -16,11 +16,11 @@
 
 		/*
 			nginx configs - get informations in nginx.conf
-
-			maxconections = worker_processes * worker_connections
+			maxConnections = worker_processes * worker_connections
 			if worker_processes = auto, worker_processes = num of cpus
+			for more informations read http://nginx.org/en/docs/ngx_core_module.html#worker_processes
 		*/
-		maxConections = 1536;
+		maxConnections = 1536;
 
 		/* interface */
 		var serverName = document.location.hostname;
@@ -140,7 +140,7 @@
 					]
 				]);
 				optionsChartScore.width = $("#score").innerWidth();
-				optionsChartScore.max = maxConections;
+				optionsChartScore.max = maxConnections;
 				chartScore.draw(dataScore, optionsChartScore);
 
 				setTimeout(loadData, refreshInterval * 1000);

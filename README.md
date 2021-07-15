@@ -12,6 +12,7 @@ location /nginx_status {
 }
 ```
 - Make sure the computer you want to view the data has access to /nginx_status
+- Edit status.html and set maxConections in line 23
 
 It is advisable to run the status.html locally on the server to be monitored to avoid cross-domain problems (and prevent unwanted peeping).
 
